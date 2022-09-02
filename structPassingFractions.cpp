@@ -2,8 +2,8 @@
 
 struct Fraction
 {
-    int numerator{};
-    int denominator{};
+    int numerator{0};
+    int denominator{1};
 };
 
 Fraction getFraction()
@@ -17,7 +17,7 @@ Fraction getFraction()
     return temp;
 }
 
-void printFractionMultiplication(const Fraction num1, const Fraction num2)
+void printFractionMultiplication(const Fraction& num1, const Fraction& num2)
 {
     std::cout << "Your fractions multiplied together: " << num1.numerator * num2.numerator << '/' << num1.denominator * num2.denominator;
 }
@@ -26,6 +26,7 @@ int main()
 {
     Fraction fraction1 { getFraction() };
     Fraction fraction2 { getFraction() };
+
     printFractionMultiplication(fraction1, fraction2);
     return 0;
 }
