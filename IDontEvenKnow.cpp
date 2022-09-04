@@ -123,7 +123,7 @@ int main()
 
     int guess{};
     while(!numbersVec.empty()){
-        std::cout << '<';
+        std::cout << '>';
         guess = getInteger();
         if (!findAndRemove(numbersVec, guess)) {
             endGame(guess, numbersVec);
